@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}
+    mysite
+{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        h1 {font-family:helvetica; color:#336699;}
+        p {font-family:helvetica;color:#336699; text-align:left;}
+        table {width:400px;}
+        footer {font-family:helvetica;color:#336699;text-align: bottom; font-size:13px;}
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>calbelden.com</h1>
+    <table>
+        <tr>
+            <td>
+                <p>
+                    Welcome to my shwangy home page generated using Jinja2 templates and the Flask web framework.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    One day, this canvas will be.. well, less blank.
+                </p>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+{% endblock %}
+{% block footer %}
+    <footer> Calvin Belden &copy 2013 </footer>
+{% endblock %}

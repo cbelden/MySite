@@ -1,15 +1,14 @@
 import os
 from mysite import app
-import jinja2
-
-
-template_dir = os.path.join(os.path.dirname(__file__), 'templates')
-jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
-                               autoescape=True)
+from flask import render_template
 
 
 @app.route('/')
 def index():
-    t = jinja_env.get_template('index.html')
     params = {}
-    return t.render(**params)
+    return render_template('sample.html', **params)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404

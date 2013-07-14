@@ -1,5 +1,6 @@
 import random
 
+
 def get_404_message():
     candidates = []
 
@@ -19,7 +20,7 @@ def get_404_message():
     </em>
     <br>
     <br>
-    My beach <a href="/">home</a> in Minnetonka may be my last safe haven; meet me there. Put a pot of coffee on, will ya?
+    My fishing <a href="/">home</a> in Cinque Terre may be my last safe haven; meet me there. Put a pot of coffee on, will ya?
     """)
 
     index = random.randint(0, len(candidates) - 1)

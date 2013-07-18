@@ -9,7 +9,7 @@ def get_404_message():
     """)
 
     candidates.append("""
-    Oops! My bad yo.  It appears I haven't created this page yet.<br>
+    Oops! My bad yo.  I haven't created this page yet.<br>
     Navigate 'back' on your browser or click <a href="/">here</a>.
     """)
 

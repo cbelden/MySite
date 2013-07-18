@@ -2,62 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cal Belden - Welcome</title>
-  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
-  <style>
-    h1 {
-      color:rgb(255, 255, 255);
-      background-color:rgb(0, 91, 163);
-      text-align:center;
-      letter-spacing:.3em;
-      text-transform:uppercase;
-    }
-    body {
-      font-size:16px;
-    }
-    ul.nav {
-      letter-spacing:.1em;
-      text-transform:lowercase;
-    }
-    li.active {
-      font-size:130%;
-      text-transform:uppercase;
-    }
-    h5 {
-      text-indent:40px;
-    }
-  </style>
+  <title>{% block pagetitle %}Cal Belden - Welcome{% endblock %}</title>
+  <link href="{{url_for('static', filename='assets/css/bootstrap.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/css/bootstrap-responsive.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='custom.css')}}" rel="stylesheet">
+  {% block style %}{% endblock %}
 </head>
 <body>
-  <div class="container">
+  <div class="navbar">
     <h1>Calvin<br>Belden</h1>
-    <div class='navbar navbar-inverse'>
-      <div class='navbar-inner nav-collapse' style="height: auto;">
-        <ul class="nav">
-          <li class="active"><a href="#">Main</a></li>
-          <li><a href="/about">Who I Am</a></li>
-          <li><a href="/projects">What I Do</a></li>
-        </ul>
-      </div>
-    </div>
-    <div id='content' class='row-fluid'>
-      <div class='span9 main'>
-        <h2>Welcome to my new* website!</h2>
-        <h5>* "blank" might be a more appropriate word</h5> 
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">Project Name</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class={%block home_nav%}{%endblock%}><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
+            <li class={%block about_nav%}{%endblock%}><a href="/about">who i am</a></li>
+            <li class={%block projects_nav%}{%endblock%}><a href="/projects">what i do</a></li>
+            <li class={%block contact_nav%}{%endblock%}><a href="/contact">contact</a></li>
+            {%block pnf_nav%}{%endblock%}
+          </ul>
+          <form class="navbar-search pull-right" action="">
+            <input type="text" class="search-query span2" placeholder="Search">
+          </form>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar-inner -->
+  </div><!-- /.navbar -->
+  <div id='content'>
+    <div class='span9 main'>
+      {% block title %}{% endblock %}
+      {% block content %}{% endblock %}
+    </div> <!-- /.main /.span9-->
+  {% block sidebar %}{% endblock %}
+  </div> <!-- /.content -->
 
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.<p> 
+  <!-- jQuery via Google + local fallback, see h5bp.com -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
 
-          <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-      </div>
-      <div class='span3 sidebar'>
-        <h2>Sections</h2>
-        <ul class="nav nav-tabs nav-stacked">
-          <li><a href="#">sup</a></li>
-          <li><a href="#">doe</a></li>
-          <li><a href="#">dude</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <!-- Bootstrap jQuery Plugins, compiled and minified -->
+  <script src="{{url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
 </body>
 </html>

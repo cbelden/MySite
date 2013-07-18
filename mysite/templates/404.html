@@ -1,31 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <style type="text/css">
-        h1 {font-family:helvetica; font-color:#355333;}
-        p {font-family:helvetica; font-color:#355333;}
-        div.span1 {font-style:bold; font-size:20px;}
-        a {font-color:yellow;}
-    </style>
-    <meta charset="UTF-8">
-    <title>4[Uh Oh!]4</title>
-    <link href="{{url_for('static', filename='assets/css/bootstrap.css')}}" rel="stylesheet">
-    <link href="{{url_for('static', filename='assets/css/bootstrap-responsive.css')}}" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class ="span2">
-                <h1>I.<br>Am so.<br>Sorry.</h1>
-            </div>
-            <div class="span10">
-                <br>
-                <br>
-                <p>
-                    {{ error_message | safe }} 
-                </p>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block pagetitle %}
+    Oh no!
+{% endblock %}
+
+{% block pnf_nav %}
+    <li class="active"><a href="/junk">404</a></li>
+{% endblock %}
+
+{% block title %}
+    <h2>I am so Sorry. It appears there's nothing here.</h2>
+{% endblock %}
+
+{% block content %}
+    {{ error_message | safe }} 
+{% endblock %}

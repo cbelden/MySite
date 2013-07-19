@@ -63,7 +63,7 @@
 /*  Pads body below fixed top navbar; sets text color */
 body {
     padding-top: 150px;
-    color: rgb(17, 28, 83)
+    color: white;
 }
 
 /*  Aligns page titles */
@@ -73,11 +73,15 @@ h2 {
 }
 
 /* Background image for the message text; need to find something better. */
-.span6 {
-    background: url('http://freeseamlesstextures.com/images/23-white-cardboard-background-lrg.jpg');
+.span8 {
+    background: url("tweed.png");
     font-size: 150%;
     line-height: 1.2em;
     overflow: scroll;
+    padding-bottom: 1.2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 8px;
 }
 
 /* Increase spacing between paragraphs */
@@ -86,10 +90,10 @@ h2 {
 }
 
 /* Format message padding */
-.message {
-    padding-left: 10px;
-    padding-right: 10px;
-}
+/*.message {
+    padding-left: 2em;
+    padding-right: 2em;
+}*/
 
 /* Hidden spoiler messages */
 .spoiler {

@@ -5,12 +5,12 @@
   <title>{% block pagetitle %}Cal Belden - Welcome{% endblock %}</title>
   <link href="{{url_for('static', filename='assets/css/bootstrap.css')}}" rel="stylesheet">
   <link href="{{url_for('static', filename='assets/css/bootstrap-responsive.css')}}" rel="stylesheet">
-  <link href="{{url_for('static', filename='custom.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='custom/custom.css')}}" rel="stylesheet">
   {% block style %}{% endblock %}
 </head>
 <body>
-  <div class="navbar">
-    <h1>Calvin<br>Belden</h1>
+  <div class="navbar navbar-fixed-top">
+    <h1 class="primary_title">Calvin<br>Belden</h1>
     <div class="navbar-inner">
       <div class="container">
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -18,13 +18,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="#">Project Name</a>
+        <a class="brand" href="#">calvin</a>
         <div class="nav-collapse">
           <ul class="nav">
             <li class={%block home_nav%}{%endblock%}><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
             <li class={%block about_nav%}{%endblock%}><a href="/about">who i am</a></li>
             <li class={%block projects_nav%}{%endblock%}><a href="/projects">what i do</a></li>
             <li class={%block contact_nav%}{%endblock%}><a href="/contact">contact</a></li>
+            <li class={%block about_site_nav%}{%endblock%}><a href="/about_site">about this site</a></li>
             {%block pnf_nav%}{%endblock%}
           </ul>
           <form class="navbar-search pull-right" action="">
@@ -35,11 +36,15 @@
     </div><!-- /.navbar-inner -->
   </div><!-- /.navbar -->
   <div id='content'>
-    <div class='span9 main'>
-      {% block title %}{% endblock %}
-      {% block content %}{% endblock %}
-    </div> <!-- /.main /.span9-->
-  {% block sidebar %}{% endblock %}
+    <div class='span6 offset2 main'>
+      <div class='message'>
+        {% block title %}{% endblock %}
+        {% block content %}{% endblock %}
+      </div> <!-- /.message -->
+    </div> <!-- /.main /.span9 /.offset3 -->
+    <div class="span3 sidebar">
+    {% block sidebar %}{% endblock %}
+    <div>
   </div> <!-- /.content -->
 
   <!-- jQuery via Google + local fallback, see h5bp.com -->

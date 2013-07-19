@@ -1,0 +1,110 @@
+/* primary title on top portion of navbar */
+.primary_title {
+  /* TODO: add a super sick font */
+  font-family: helvetica;
+  color: white;
+  background-color: rgb(0, 91, 163);
+  text-align: left;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 2px solid rgb(98, 136, 192);
+}
+
+/* General navbar-inner (part with buttons) */
+.navbar-inner {
+  background-color: rgb(0, 91, 163);
+  border-top: 10px solid white;
+}
+
+/* standard navbar button*/
+.navbar .nav > li > a {
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+    border-right: 2px solid rgb(98, 136, 192);
+}
+
+/* Active navbar button */
+.navbar .nav > .active > a{
+    color: white;
+    background-color: rgb(30, 121, 193);
+    text-shadow: none;
+}
+
+/* navbar hover */
+.navbar .nav > :hover {
+    color: #555555;
+    background-color: #e5e5e5
+}
+
+/* brand */
+.navbar .brand {
+    padding-left: 1em;
+    padding-right: 2em;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+    letter-spacing: .2em;
+    border-right: 2px solid rgb(98, 136, 192);
+}
+
+/* Formatting for nav button text */
+.nav {
+  letter-spacing: .1em;
+  text-transform: lowercase;
+}
+
+/* CSS for active navbar button */
+.active {
+  font-size: 130%;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+}
+
+/*  Pads body below fixed top navbar; sets text color */
+body {
+    padding-top: 150px;
+    color: rgb(17, 28, 83)
+}
+
+/*  Aligns page titles */
+h2 {
+    text-align: center;
+    font-size: 135%;
+}
+
+/* Background image for the message text; need to find something better. */
+.span6 {
+    background: url('http://freeseamlesstextures.com/images/23-white-cardboard-background-lrg.jpg');
+    font-size: 150%;
+    line-height: 1.2em;
+    overflow: scroll;
+}
+
+/* Increase spacing between paragraphs */
+.message > p {
+    margin-bottom: 1em;
+}
+
+/* Format message padding */
+.message {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Hidden spoiler messages */
+.spoiler {
+    visibility: hidden;
+    display: inline;
+}
+
+/*
+Currently  not working: I want the spoiler message to
+appear if the user hovers over the text.
+*/
+.spoiler:hover {
+    visibility: visible;
+    color: #005580;
+}
+
+
+

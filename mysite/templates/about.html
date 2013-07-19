@@ -1,4 +1,30 @@
 {% extends "base.html" %}
-{% block content %}
-    
+
+{% block pagetitle %}
+    Cal Belden - About
 {% endblock %}
+
+{% block about_nav %}
+    "active"
+{% endblock %}
+
+{% block title %}
+    <h2>About me</h2>
+{% endblock %}
+
+{% block content %}
+<!-- TODO : would like to increase the spacing between paragraphs -->
+    <p>
+        As you may have already guessed, I'm Calvin Belden: student, son, brother, friend, acquaintance, innovator, loyal confidant, and (to some) arch nemesis.
+    </p>
+    <p>
+        Officially, I am a senior Electrical Engineering student at the University of Notre Dame.  I've picked up
+        various Computer Science skills via coursework, internships, and personal investigation.  If you'd like, you can take a look at my resume <a href="{{url_for('static', filename='resume/resume.pdf')}}">here</a>.
+    </p>
+    <p>
+        When I'm not working, studying, reading, or tinkering, you can find me out on the golf course shanking golf
+        balls into beverage carts.  I also enjoy swimming, frequenting the local movie theater, and magnets.
+    </p>
+{% endblock %}
+
+<!-- TODO add sidebar for sidenotes! -->

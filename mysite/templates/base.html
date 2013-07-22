@@ -6,7 +6,7 @@
   <link href="{{url_for('static', filename='assets/css/bootstrap.css')}}" rel="stylesheet">
   <link href="{{url_for('static', filename='assets/css/bootstrap-responsive.css')}}" rel="stylesheet">
   <link href="{{url_for('static', filename='custom/custom.css')}}" rel="stylesheet">
-  <link href="http://fonts.googleapis.com/css?family=Oxygen|Sintony" rel="stylesheet" type="text/css">
+  <!-- <link href="http://fonts.googleapis.com/css?family=Oxygen|Sintony" rel="stylesheet" type="text/css"> -->
   {% block style %}{% endblock %}
 </head>
 <body>
@@ -35,10 +35,12 @@
       </div><!-- /.container -->
     </div><!-- /.navbar-inner -->
   </div><!-- /.navbar -->
-  <div id='content'>
+  <div class='content'>
+    <div class='title-bar'>
+      {% block title %}{% endblock %}
+    </div> <!-- ./title-bar -->
     <div class='span6 offset3 main'>
       <div class='message'>
-        {% block title %}{% endblock %}
         {% block content %}{% endblock %}
       </div> <!-- /.message -->
     </div> <!-- /.main /.span9 /.offset3 -->

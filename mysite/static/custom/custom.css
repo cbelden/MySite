@@ -1,15 +1,15 @@
 /* General navbar-inner (part with buttons) */
 .navbar-inner {
-  padding-left: 1em;
+    padding-left: 1em;
     /* colorzilla generated gradient */
-background: #48b500; /* Old browsers */
-background: -moz-linear-gradient(top, #48b500 0%, #006e2e 39%, #114900 86%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#48b500), color-stop(39%,#006e2e), color-stop(86%,#114900)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #48b500 0%,#006e2e 39%,#114900 86%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #48b500 0%,#006e2e 39%,#114900 86%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #48b500 0%,#006e2e 39%,#114900 86%); /* IE10+ */
-background: linear-gradient(to bottom, #48b500 0%,#006e2e 39%,#114900 86%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48b500', endColorstr='#114900',GradientType=0 ); /* IE6-9 */
+    background: #48b500; /* Old browsers */
+    background: -moz-linear-gradient(top, #48b500 0%, #006e2e 39%, #114900 86%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#48b500), color-stop(39%,#006e2e), color-stop(86%,#114900)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #48b500 0%,#006e2e 39%,#114900 86%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #48b500 0%,#006e2e 39%,#114900 86%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #48b500 0%,#006e2e 39%,#114900 86%); /* IE10+ */
+    background: linear-gradient(to bottom, #48b500 0%,#006e2e 39%,#114900 86%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48b500', endColorstr='#114900',GradientType=0 ); /* IE6-9 */
 }
 
 /* standard navbar button*/
@@ -17,6 +17,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48b500', end
     color: rgb(255, 255, 255);
     text-shadow: none;
     border-right: 1px solid rgb(107, 158, 113);
+    border-radius: 4px;
 }
 
 /* Active navbar button */
@@ -48,45 +49,47 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48b500', end
 
 /* Formatting for nav button text */
 .nav {
-  letter-spacing: .1em;
-  text-transform: lowercase;
+    letter-spacing: .1em;
+    text-transform: lowercase;
+    border-radius: 4px;
+}
+.title-bar {
+    font-size: 150%;
+    text-align: left;
+    padding: .3em 0 .05em 2em;
+    background-color: rgb(50, 155, 0);
+    color: white;
 }
 
 /*  Pads body below fixed top navbar; sets text color */
 body {
-    padding-top: 100px;
-    color: rgb(0, 31, 0);
-    background-color: rgb(193, 247, 208);
-}
-
-/*  Aligns page titles */
-h2 {
-    text-align: center;
-    font-size: 135%;
-    font-family: Sintony;
+    padding-top: 30px;
+    color: white;
+    background-image: url("tweed.png");
 }
 
 /* Background image for the message text; need to find something better. */
 .main {
-    background: url("kindajean.png");
-    opacity: 0.9;
+    background-color: rgb(83, 83, 83);
+    /* TODO: would like to change the background opacity but keep text dark */
     font-size: 125%;
     line-height: 1.2em;
     overflow: scroll;
-    padding-bottom: 1.2em;
-    padding-left: 2em;
-    padding-right: 2em;
-    border-radius: 30px;
+    padding: 1em 1em 0 1em;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px 3px rgb(58, 58, 58);
+    margin-top: 50px;
 }
 
 /* Increase spacing between paragraphs */
 .message > p {
     margin-bottom: 1em;
-    font-family: Oxygen;
+    /*font-family: Oxygen;*/
+    /* TODO: make #spoiler text invisible until rollover */
 }
 
 .main a {
-  color: rgb(0, 0, 255);
+  color: rgb(65, 221, 59);
 }
 
 

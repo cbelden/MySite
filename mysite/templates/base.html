@@ -6,7 +6,7 @@
   <link href="{{url_for('static', filename='assets/css/bootstrap.css')}}" rel="stylesheet">
   <link href="{{url_for('static', filename='assets/css/bootstrap-responsive.css')}}" rel="stylesheet">
   <link href="{{url_for('static', filename='custom/custom.css')}}" rel="stylesheet">
-  <!-- <link href="http://fonts.googleapis.com/css?family=Oxygen|Sintony" rel="stylesheet" type="text/css"> -->
+  <link href="http://fonts.googleapis.com/css?family=Oxygen|Sintony" rel="stylesheet" type="text/css">
   {% block style %}{% endblock %}
 </head>
 <body>
@@ -22,15 +22,12 @@
         <div class="nav-collapse">
           <ul class="nav">
             <li class={%block home_nav%}{%endblock%}><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
-            <li class={%block about_nav%}{%endblock%}><a href="/about">who I am</a></li>
-            <li class={%block projects_nav%}{%endblock%}><a href="/projects">what I do</a></li>
+            <li class={%block about_nav%}{%endblock%}><a href="/about">about</a></li>
+            <li class={%block projects_nav%}{%endblock%}><a href="/projects">projects</a></li>
             <li class={%block contact_nav%}{%endblock%}><a href="/contact">contact</a></li>
-            <li class={%block about_site_nav%}{%endblock%}><a href="/about_site">about this site</a></li>
+            <li class={%block about_site_nav%}{%endblock%}><a href="/about_site">this site</a></li>
             {%block pnf_nav%}{%endblock%}
           </ul>
-          <form class="navbar-search pull-right" action="">
-            <input type="text" class="search-query span2" placeholder="Search">
-          </form>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar-inner -->

@@ -24,6 +24,11 @@ def get_404_message():
     there.  Put a pot of coffee on, will ya?
     """)
 
+    candidates.append("""
+    Well, I'm normally not this rude on first dates, but I'm having issues and I have to ask that you go back <a
+    href="/">home</a>  =(
+    """)
+
     index = random.randint(0, len(candidates) - 1)
 
     return candidates[index]

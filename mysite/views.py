@@ -15,9 +15,14 @@ def about():
     return render_template('about.html')
 
 
-# @app.route('/projects')
-# def projects():
-#     return render_template('projects.html')
+@app.route('/projects')
+def work():
+    return render_template('work.html')
+
+
+@app.route('/about_site')
+def about_site():
+    return render_template('about_site.html')
 
 
 # ---------- error handlers -----------

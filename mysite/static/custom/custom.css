@@ -50,6 +50,15 @@
     text-transform: lowercase;
     border-radius: 4px;
 }
+
+/*  Pads body below fixed top navbar; sets text color */
+body {
+    padding-top: 30px;
+    color: white;
+    background-image: url("train.jpg");
+    background-position: 60% 15%;
+}
+
 .title-bar {
     font-size: 150%;
     text-align: left;
@@ -58,39 +67,26 @@
     color: white;
 }
 
-/*  Pads body below fixed top navbar; sets text color */
-body {
-    padding-top: 30px;
-    color: white;
-/*    background-image: url("italy.jpeg");
-    background-position: 60% 15%;*/
-    background-image: url("train.jpg");
-    background-position: 60% 15%;
+/* Box for message */
+.main {
+    background-color: rgb(19, 19, 19);
+    border-radius: 2px;
+    box-shadow: 5px 5px 5px 2px rgb(30, 30, 30);
+    opacity: 0.8;
+    margin-top: 5%;
 }
 
-/* Background image for the message text; need to find something better. */
-.main {
-    background-color: rgb(41, 40, 40);
-    /* TODO: would like to change the background opacity but keep text dark */
-    font-size: 125%;
-    line-height: 1.2em;
-    overflow: scroll;
-    padding: 0 1em .5em 1em;
-    border-radius: 4px;
-    box-shadow: 5px 5px 5px 2px rgb(44, 44, 44);
-    opacity: 0.8;
-    margin-top: 50px;
-    margin-bottom: 50px;
+/* Increase spacing between paragraphs */
+.message {
+    padding: 5% 7% 5% 7%;
+    margin-bottom: 1em;
+    font-family: Oxygen;
+    font-size: 130%;
+    line-height: 1.3em;
 }
 
 h3 {
   letter-spacing: .05em;
-}
-
-/* Increase spacing between paragraphs */
-.message > p {
-    margin-bottom: 1em;
-    font-family: Oxygen;
 }
 
 .main a {

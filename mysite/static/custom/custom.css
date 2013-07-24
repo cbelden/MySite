@@ -55,8 +55,9 @@
 body {
     padding-top: 30px;
     color: white;
-    background-image: url("train.jpg");
-    background-position: 60% 15%;
+    background-image: url("italy.jpeg");
+    background-position: 0% 25%;
+    background-attachment: fixed;
 }
 
 .title-bar {
@@ -72,8 +73,9 @@ body {
     background-color: rgb(19, 19, 19);
     border-radius: 2px;
     box-shadow: 5px 5px 5px 2px rgb(30, 30, 30);
-    opacity: 0.8;
+    opacity: 0.9;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 /* Increase spacing between paragraphs */

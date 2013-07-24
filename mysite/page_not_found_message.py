@@ -25,7 +25,7 @@ def get_404_message():
     """)
 
     candidates.append("""
-    Well, I'm normally not this rude on first dates, but I'm having issues and I have to ask that you go back <a
+    Well, I'm normally not this rude on first dates, but I'm having issues and unfortunately I must ask that you go back <a
     href="/">home</a>  =(
     """)
 

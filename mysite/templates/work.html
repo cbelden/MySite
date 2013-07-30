@@ -13,24 +13,36 @@
 {% endblock %}
 
 {% block content %}
-    <h3>MTS Systems Corporation</h3>
+    <h3 id="mts" style="padding-top: 40px; margin-top: -40px;">MTS Systems Corporation</h3>
     <h4>Summer 2013</h4>
     <p>
-        This past summer I interned as a software test engineer at <a href="http://www.mts.com/en/index.htm" target="_blank">MTS Systems</a> in Eden Prairie, MN.  MTS produces test devices for a variety of fields including the materials, automotive, and aerospace industries.  Each of the test <a href="http://www.mts.com/mtscriterion/" target="_blank">frames</a> (primarily used for the materials industry) comes equipped with a rich Windows application, <a href="http://www.mts.com/testsuite/" target="_blank">TestSuite</a>.
+        This past summer I interned as a software test engineer at <a href="http://www.mts.com/en/index.htm" target="_blank">MTS Systems</a> in Eden Prairie, MN.  MTS produces test devices for a variety of fields including the materials, automotive, and aerospace industries.  Many of the test frames come equipped with a rich Windows application, <a href="http://www.mts.com/testsuite/" target="_blank">TestSuite</a>.
     </p>
     <p>
-        I was part of an automated test team, and I spent the summer implementing UI drivers and writing automated UI test cases for TestSuite.  It was rewarding converting time intensive manual quality tests into automated processes that could be run every night (versus crammed at the end of every release!).
+        I was part of the automated test team at MTS, and I spent the summer implementing UI drivers and writing automated UI test cases (in C#) for TestSuite.  It was rewarding converting time intensive manual tests into automated processes that could be run every night (versus crammed in at the end of every release!).
     </p>
 
-    <h3>Gentex Corporation</h3>
+    <h3 id="gentex" style="padding-top: 40px; margin-top: -40px;">Gentex Corporation</h3>
     <h4>Summer 2012</h4>
     <p>
-        During the summer of 2012 I interned as a software engineer at <a href="http://www.gentex.com/" target="_blank">Gentex</a> in Zeeland, Michigan.  Gentex manufactures car mirrors, and I primarily worked on the firmware (written in C) developing commands to exercise the mirror's functionality (controlling automatic dimming, rear view displays, GPS, compass, etc.).  At the end of the summer, I wrote integration tests in Ruby to exercise the firmware.
+        During the summer of 2012 I interned as a software engineer at <a href="http://www.gentex.com/" target="_blank">Gentex</a> in Zeeland, Michigan.  Gentex manufactures car mirrors, and I primarily worked on the firmware (written in C) developing commands to exercise the mirror's functionality (controlling automatic dimming, rear view displays, GPS, compass, etc.).  At the end of the summer, I wrote integration tests in Ruby which exercised various components of the firmware.
     </p>
 
-    <h3>calbelden.com</h3>
+    <h3 id="this_site" style="padding-top: 40px; margin-top: -40px;">calbelden.com</h3>
     <h4>Summer 2013</h4>
     <p>
-        I started working on this website earlier this summer to pick up on html and css.  My hope is to use the knowledge I've learned here and apply it to a food ordering web-app geared towards Notre Dame's dorm restaurants (student owned/runned).  I plan on making more progress on the food app later this fall!
+        I started working on this website earlier this summer to learn html and css and to keepy my Python skills fresh.  My hope is to use the knowledge I've learned here and apply it to a food ordering web-app geared towards Notre Dame's dorm restaurants (student owned/runned).  I plan on making more progress on the food app later this fall!
     </p>
 {% endblock %}
+
+{% block sidebar %}
+    <div class="sidebar">
+        <ul class="nav nav-list">
+          <li class="nav-header">Sections</li>
+          <li><a href="#mts">MTS</a></li>
+          <li><a href="#gentex">Gentex</a></li>
+          <li><a href="#this_site">calbelden.com</a></li>
+        </ul>
+    </div>
+{% endblock %}
+

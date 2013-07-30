@@ -12,6 +12,7 @@
   {% block style %}{% endblock %}
 </head>
 <body>
+  <!-- NAVIGATION BAR -->
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -34,19 +35,23 @@
       </div><!-- /.container -->
     </div><!-- /.navbar-inner -->
   </div><!-- /.navbar -->
-  <div class='content'>
-    <div class='title-bar'>
-      {% block title %}{% endblock %}
-    </div> <!-- ./title-bar -->
-    <div class='main span6 offset3'>
-      <div class='message'>
-        {% block content %}{% endblock %}
-      </div> <!-- /.message -->
-    </div> <!-- /.main /.span9 /.offset3 -->
-    <div class="span3 sidebar-nav">
-    {% block sidebar %}{% endblock %}
-    <div>
-  </div> <!-- /.content -->
+
+  <!-- TITLE BAR -->
+  <div class='title-bar'>
+    {% block title %}{% endblock %}
+  </div> <!-- ./title-bar -->
+  
+  <!-- GUTTER -->
+  <div class="gutter"></div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="main-container">
+    {% block content %}{% endblock %}
+  </div> <!-- ./main-container -->
+
+  <!-- SIDEBAR -->
+  {% block sidebar %}
+  {% endblock %}
 
   <!-- jQuery via Google + local fallback, see h5bp.com -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

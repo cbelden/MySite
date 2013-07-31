@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block pagetitle %}
+    Cal Belden - Holler!
+{% endblock %}
+
+{% block contact_nav %}
+    "active"
+{% endblock %}
+
+{% block title %}
+    <h2>Contact me. Not actually supported yet :(</h2>
+{% endblock %}
+
+{% block content %}
+    <h3>Send me a message!</h3>
+    <form action="">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Future Boss" required>
+
+        <label for="email">Your E-mail:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="number">Your Number (optional!):</label>
+        <input type="tel" id="number" name="number" required>
+
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message" placeholder="Gee Cal, really great work on the website but maybe frontend dev isn't your thing." size="15" required>
+
+        <input type="submit" id="submit">
+    </form>
+{% endblock %}

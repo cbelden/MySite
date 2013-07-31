@@ -24,6 +24,10 @@ def work():
 def about_site():
     return render_template('about_site.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 
 # ---------- error handlers -----------
 @app.errorhandler(404)

@@ -9,53 +9,54 @@
   <link href="{{url_for('static', filename='assets/css/bootstrap-responsive.css')}}" rel="stylesheet">
   <link href="{{url_for('static', filename='custom/custom.css')}}" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Oxygen|Sintony" rel="stylesheet" type="text/css">
-  {% block style %}{% endblock %}
+  <style type="text/css">{% block style %}{% endblock %}</style>
 </head>
 <body>
-  <!-- NAVIGATION BAR -->
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="/">calvin</a>
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li class={%block home_nav%}{%endblock%}><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
-            <li class={%block about_nav%}{%endblock%}><a href="/about">about</a></li>
-            <li class={%block projects_nav%}{%endblock%}><a href="/projects">projects</a></li>
-            <li class={%block contact_nav%}{%endblock%}><a href="/contact">contact</a></li>
-            <li class={%block about_site_nav%}{%endblock%}><a href="/about_site">this site</a></li>
-            {%block pnf_nav%}{%endblock%}
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar-inner -->
-  </div><!-- /.navbar -->
+  <div class="wrap">
+    
+    <!-- NAVIGATION BAR -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">calvin</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class={%block home_nav%}{%endblock%}><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
+              <li class={%block about_nav%}{%endblock%}><a href="/about">about</a></li>
+              <li class={%block projects_nav%}{%endblock%}><a href="/projects">projects</a></li>
+              <li class={%block contact_nav%}{%endblock%}><a href="/contact">contact</a></li>
+              <li class={%block about_site_nav%}{%endblock%}><a href="/about_site">this site</a></li>
+              {%block pnf_nav%}{%endblock%}
+            </ul>
+          </div><!-- /.nav-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </div><!-- /.navbar -->
 
-  <div class="background-image">
-    <img src="{{url_for('static', filename='custom/italy.jpeg')}}" alt="Background image of an Italian island.">
+    <!-- TITLE BAR -->
+    <div class='title-bar'>
+      {% block title %}{% endblock %}
+    </div> <!-- ./title-bar -->
+    
+    <!-- GUTTER -->
+    <div class="gutter"></div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+    {% block sidebar %}{% endblock %}
+    </div> <!-- ./sidebar -->
+
+    <!-- MAIN CONTAINER -->
+    {% block content %}
+    <div class="main-container">
+    </div> <!-- ./main-container -->
+    {% endblock %}
   </div>
-
-  <!-- TITLE BAR -->
-  <div class='title-bar'>
-    {% block title %}{% endblock %}
-  </div> <!-- ./title-bar -->
-  
-  <!-- GUTTER -->
-  <div class="gutter"></div>
-
-  <!-- MAIN CONTAINER -->
-  <div class="main-container">
-    {% block content %}{% endblock %}
-  </div> <!-- ./main-container -->
-
-  <!-- SIDEBAR -->
-  {% block sidebar %}
-  {% endblock %}
 
   <!-- jQuery via Google + local fallback, see h5bp.com -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

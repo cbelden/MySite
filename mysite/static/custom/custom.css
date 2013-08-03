@@ -49,6 +49,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
     border-radius: 4px;
 }
 
+/* background image business */
+html {
+    background: url(italy.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 /*  Pads body below fixed top navbar; sets text color */
 body {
     padding-top: 30px;
@@ -59,14 +68,14 @@ body {
 /* Fix for fixed size background image. Code from this stackoverflow thread:
  * http://stackoverflow.com/questions/1150163/stretch-and-scale-a-css-image-in-the-background-with-css-only
  */
-.background-image {
-    height: 100%;
-    width: 100%;
+/*.background-image {
+    min-height: 100%;
+    min-width: 100%;
     position: fixed;
     left: 0;
     top: 0; 
     z-index: -1;
-}
+}*/
 
 .stretch {
   min-height: 100%;
@@ -75,49 +84,45 @@ body {
 /* Styling for primary page title */
 .title-bar {
     font-size: 150%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: left;
-    padding: 4px 0 0 15px;
+    padding: .15% 0 0 1%;
     background-color: rgb(78, 197, 21);
     color: white;
 }
 
 /* Main gutter on left side of the page */
 .gutter {
-  width: 25%;
+  width: 30%;
   float: left;
   height: 1px;
 }
 
-/* Box that contains main page content */
+/* Main page content div */
 .main-container {
     /* positioning */
-    width: 40%;
     float: left;
     margin-bottom: 100px;
+    padding-bottom: 10px;
+
+    /* size */
+    width: 40%;
+    min-width: 400px;
+    max-width: 450px;
 
     /* appearance */
     background-color: rgb(19, 19, 19);
     opacity: .7;
     border-radius: 4px;
     box-shadow: 5px 5px 5px 2px rgb(30, 30, 30);
-    padding-bottom: 10px;
 }
 
 /* sidebar stuff!*/
 .sidebar {
     /* positioning */
-    width: 26%;
-    margin-left: 67%;
+    width: 1px;
+    height: 1px;
     float: left;
-    margin-bottom: 10px;
-    position: fixed;
-
-    /* appearance */
-    background-color: rgb(19, 19, 19);
-    opacity: .7;
-    border-radius: 4px;
-    box-shadow: 5px 5px 5px 2px rgb(30, 30, 30);
 }
 
 .nav-header {
@@ -139,8 +144,8 @@ p {
 }
 
 h3 {
-    margin-top: 0;
-    padding-top: 15px;
+    /*margin-top: 0;*/
+    padding-top: 12px;
 }
 
 /* Text positioning */

@@ -9,26 +9,28 @@
 {% endblock %}
 
 {% block title %}
-    <h2>Contact me. Not actually supported yet :(</h2>
+    <h2>Contact me.</h2>
 {% endblock %}
 
 {% block content %}
   <div class="main-container">
     <h3>Send me a message!</h3>
-    <form action="">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" placeholder="Future Boss" required>
+    <div class="form-wrap">
+        <form action="/contact" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Future Boss" required class="single-line-input">
 
-        <label for="email">Your E-mail:</label>
-        <input type="email" id="email" name="email">
+            <label for="email">Your E-mail:</label>
+            <input type="email" id="email" name="email" required class="single-line-input">
 
-        <label for="number">Your Number (optional!):</label>
-        <input type="tel" id="number" name="number" required>
+            <label for="number">Your Number (optional!):</label>
+            <input type="tel" id="number" name="number" class="single-line-input">
 
-        <label for="message">Message:</label>
-        <input type="text" id="message" name="message" placeholder="Gee Cal, really great work on the website but maybe frontend dev isn't your thing." size="15" required>
+            <label for="message">Words of Wisdom:</label>
+            <textarea type="textarea" id="message" name="message" placeholder="I was sitting here letting my cat walk on the keyboard (per my usual web browsing habits) when I came accross this lacklustre expos&eacute;. Shame on you for further bloating the internet!" size="15" required class="multi-line-input"></textarea>
 
-        <input type="submit" id="submit">
-    </form>
+            <input type="submit" id="submit" class-"submit-button">
+        </form>
+    </div> <!-- ./form-wrap -->
   </div> <!-- ./main-container -->
 {% endblock %}

@@ -1,22 +1,23 @@
 {% extends "base.html" %}
 
 {% block pagetitle %}
-    Cal Belden - Welcome
+    Cal Belden - Holler!
 {% endblock %}
 
-{% block home_nav %}
+{% block contact_nav %}
     class="active"
 {% endblock %}
 
 {% block title %}
-    <h2>Welcome.</h2>
+    <h2>Contact me.</h2>
 {% endblock %}
 
 {% block content %}
   <div class="main-container">
-    <h3>Thanks for stopping by!</h3>
+    <h3>Thank you {{ name }}!</h3>
     <p>
-        Greetings; you've stumbled upon Calvin Belden's latest project.  Feel free to explore his expos&eacute;  and leave a comment!
+        Your message was successfully sent; Calvin will get back to you shortly.
     </p>
+    </div> <!-- ./form-wrap -->
   </div> <!-- ./main-container -->
 {% endblock %}

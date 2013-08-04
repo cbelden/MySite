@@ -1,7 +1,8 @@
 #import os
-import page_not_found_message as pnfm
+import business.process_message as pm
+import business.page_not_found_message as pnfm
 from mysite import app
-from flask import render_template
+from flask import render_template, request
 
 
 # -------  primary page handlers -------
@@ -24,9 +25,14 @@ def work():
 def about_site():
     return render_template('about_site.html')
 
-@app.route('/contact')
+
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return render_template('contact.html')
+    if request.method == 'POST':
+        pm.submit_message(request.form)
+        return render_template('thank_you.html', name=request.form['name'])
+    else:
+        return render_template('contact.html')
 
 
 # ---------- error handlers -----------

@@ -22,6 +22,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
     border-radius: 2px;
 }
 
+.navbar .nav > li > a:hover {
+  color: white;
+}
+
 /* navbar hover */
 .navbar .nav > :hover {
     color: white;
@@ -49,36 +53,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
     border-radius: 4px;
 }
 
-/* background image business */
-html {
+/*  Main page stuff */
+body {
+    padding-top: 30px;
+    color: white;
+
+    /* background image */
     background: url(italy.jpeg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-/*  Pads body below fixed top navbar; sets text color */
-body {
-    padding-top: 30px;
-    color: white;
-}
-
-
-/* Fix for fixed size background image. Code from this stackoverflow thread:
- * http://stackoverflow.com/questions/1150163/stretch-and-scale-a-css-image-in-the-background-with-css-only
- */
-/*.background-image {
-    min-height: 100%;
-    min-width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0; 
-    z-index: -1;
-}*/
-
-.stretch {
-  min-height: 100%;
 }
 
 /* Styling for primary page title */
@@ -93,36 +78,31 @@ body {
 
 /* Main gutter on left side of the page */
 .gutter {
-  width: 30%;
-  float: left;
-  height: 1px;
+    width: 10%;
+    float: left;
+    height: 1px;
+}
+
+.main-content-container {
+    width: 80%;
+    float: left;
+    margin-bottom: 100px;
 }
 
 /* Main page content div */
 .main-container {
     /* positioning */
-    float: left;
-    margin-bottom: 100px;
-    padding-bottom: 10px;
+    margin: 0 auto;
 
     /* size */
-    width: 40%;
-    min-width: 400px;
-    max-width: 450px;
+    width: 450px;
 
     /* appearance */
+    padding: 0 12px 8px 10px;
     background-color: rgb(19, 19, 19);
-    opacity: .7;
+    opacity: .8;
     border-radius: 4px;
     box-shadow: 5px 5px 5px 2px rgb(30, 30, 30);
-}
-
-/* sidebar stuff!*/
-.sidebar {
-    /* positioning */
-    width: 1px;
-    height: 1px;
-    float: left;
 }
 
 .nav-header {
@@ -153,7 +133,6 @@ h3, h4, p {
     font-family: Oxygen;
     color: white;
     margin-left: 15px;
-    margin-right: 15px;
 }
 
 /* link color */

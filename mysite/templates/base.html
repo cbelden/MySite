@@ -13,50 +13,49 @@
 </head>
 <body>
   <div class="wrap">
-    
-    <!-- NAVIGATION BAR -->
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/">calvin</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class={%block home_nav%}{%endblock%}><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
-              <li class={%block about_nav%}{%endblock%}><a href="/about">about</a></li>
-              <li class={%block projects_nav%}{%endblock%}><a href="/projects">projects</a></li>
-              <li class={%block contact_nav%}{%endblock%}><a href="/contact">contact</a></li>
-              <li class={%block about_site_nav%}{%endblock%}><a href="/about_site">this site</a></li>
-              {%block pnf_nav%}{%endblock%}
-            </ul>
-          </div><!-- /.nav-collapse -->
-        </div><!-- /.container -->
-      </div><!-- /.navbar-inner -->
-    </div><!-- /.navbar -->
 
-    <!-- TITLE BAR -->
-    <div class='title-bar'>
-      {% block title %}{% endblock %}
-    </div> <!-- ./title-bar -->
-    
-    <!-- GUTTER -->
-    <div class="gutter"></div>
+      <!-- NAVIGATION BAR -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/">calvin</a>
+            <div class="nav-collapse">
+              <ul class="nav">
+                <li class={%block home_nav%}{%endblock%}><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
+                <li class={%block about_nav%}{%endblock%}><a href="/about">about</a></li>
+                <li class={%block projects_nav%}{%endblock%}><a href="/projects">projects</a></li>
+                <li class={%block contact_nav%}{%endblock%}><a href="/contact">contact</a></li>
+                <li class={%block about_site_nav%}{%endblock%}><a href="/about_site">this site</a></li>
+                {%block pnf_nav%}{%endblock%}
+              </ul>
+            </div><!-- /.nav-collapse -->
+          </div><!-- /.container -->
+        </div><!-- /.navbar-inner -->
+      </div><!-- /.navbar -->
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-    {% block sidebar %}{% endblock %}
-    </div> <!-- ./sidebar -->
+      <!-- TITLE BAR -->
+      <div class='title-bar'>
+        {% block title %}{% endblock %}
+      </div> <!-- ./title-bar -->
+      
+      <!-- GUTTER -->
+      <div class="gutter"></div>
 
-    <!-- MAIN CONTAINER -->
-    {% block content %}
-    <div class="main-container">
-    </div> <!-- ./main-container -->
-    {% endblock %}
-  </div>
+      <!-- MAIN CONTENT WRAPPER -->
+      <div class="main-content-wrapper">
+
+        <!-- MAIN CONTAINER -->
+        {% block content %}
+        <div class="main-container"></div> <!-- ./main-container -->
+        {% endblock %}
+
+      </div> <!-- ./main-content-wrapper -->
+  </div> <!-- ./wrap -->
 
   <!-- jQuery via Google + local fallback, see h5bp.com -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

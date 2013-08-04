@@ -26,6 +26,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
   color: white;
 }
 
+/* color transition bizness */
+.navbar .nav li {
+    transition: background-color .5s;
+    -webkit-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    -o-transition: background-color .5s;
+}
+
 /* navbar hover */
 .navbar .nav > :hover {
     color: white;
@@ -98,11 +106,15 @@ body {
     width: 450px;
 
     /* appearance */
-    padding: 0 12px 8px 10px;
+    padding: 1px 12px 8px 10px;
     background-color: rgb(19, 19, 19);
     opacity: .8;
     border-radius: 4px;
     box-shadow: 5px 5px 5px 2px rgb(30, 30, 30);
+}
+
+.main-container:after {
+  background-color: black;
 }
 
 .nav-header {
@@ -123,11 +135,6 @@ p {
     line-height: 1.3em;
 }
 
-h3 {
-    /*margin-top: 0;*/
-    padding-top: 12px;
-}
-
 /* Text positioning */
 h3, h4, p {
     font-family: Oxygen;
@@ -144,6 +151,7 @@ form {
   margin-left: 4%;
 }
 
+/* contact form bizness */
 #message {
   height: 10em;
 }

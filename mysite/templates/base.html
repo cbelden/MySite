@@ -40,7 +40,7 @@
       </div><!-- /.navbar -->
 
       <!-- TITLE BAR -->
-      <div class='title-bar'>
+      <div class='title-bar' id='title-bar'>
         {% block title %}{% endblock %}
       </div> <!-- ./title-bar -->
       
@@ -64,5 +64,8 @@
 
   <!-- Bootstrap jQuery Plugins, compiled and minified -->
   <script src="{{url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+
+  <!-- Custom js for transitions -->
+  <script src="{{url_for('static', filename='custom/custom.js')}}"></script>
 </body>
 </html>

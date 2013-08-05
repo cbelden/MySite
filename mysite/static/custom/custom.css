@@ -83,7 +83,7 @@ body {
     margin-bottom: 30px;
     text-align: left;
     padding: .15% 0 0 1%;
-    background-color: rgb(78, 197, 21);
+    background-color: rgb(29, 201, 22);
     color: white;
 }
 
@@ -105,6 +105,7 @@ body {
 .main-container {
     /* positioning */
     margin: 0 auto;
+    margin-bottom: 20px;
 
     /* size */
     width: 450px;
@@ -115,6 +116,12 @@ body {
     opacity: .9;
     border-radius: 4px;
     box-shadow: 5px 5px 5px 2px rgb(30, 30, 30);
+
+    /*  transition */
+    -webkit-animation: opacitychange 1s; /* Safari 4+ */
+    -moz-animation:    opacitychange 1s; /* Fx 5+ */
+    -o-animation:      opacitychange 1s; /* Opera 12+ */
+    animation:         opacitychange 1s;
 }
 
 /* text appearance - spacing */
@@ -135,17 +142,17 @@ a {
     color: rgb(65, 221, 59);
 }
 
+/* contact form bizness */
 .form-wrap {
-    margin-left: 50px;
+  margin-left: 12px;
 }
 
-/* contact form bizness */
 .single-line-input {
-    width: 250px;
+    width: 400px;
 }
 
 .multi-line-input {
-    width: 300px;
+    width: 400px;
     height: 80px;
 
 }
@@ -156,7 +163,7 @@ input[type="submit"] {
     background-color: white;
     border-radius: 5px;
     border: none;
-    width: 250px;
+    width: 410px;
     margin-top: 20px;
 
     /* transition stuff (for :hover) */
@@ -169,6 +176,26 @@ input[type="submit"] {
 input[type="submit"]:hover {
     color: white;
     background-color: rgb(82, 197, 72);
+}
+
+/* keyframe business */
+
+/* opacity change */
+@-webkit-keyframes opacitychange {
+  0%   { opacity: 0; }
+  100% { opacity: .8; }
+}
+@-moz-keyframes opacitything {
+  0%   { opacity: 0; }
+  100% { opacity: .8; }
+}
+@-o-keyframes opacitything {
+  0%   { opacity: 0; }
+  100% { opacity: .8; }
+}
+@keyframes opacitything {
+  0%   { opacity: 0; }
+  100% { opacity: .8; }
 }
 
 

@@ -5,7 +5,7 @@
   <meta name="description" content="A fantastic review covering the limited life works of Calvin Belden, an Electrical Engineering student and Software Engineer at the University of Notre Dame.">
   <meta name="keywords" content="calvin, belden, electrical, computer science, computer, electrical engineer, software engineer, software, developer, programmer, funny, guy, dude, man, brother, friend, university, notre dame">
   <title>{% block pagetitle %}Cal Belden - Welcome{% endblock %}</title>
-  <link rel="shortcut icon" href="{{url_for('static', filename='custom/video_display.ico')}}" />
+  <link rel="shortcut icon" href="{{url_for('static', filename='custom/clover.ico')}}" />
   <link href="{{url_for('static', filename='assets/css/bootstrap.css')}}" rel="stylesheet">
   <link href="{{url_for('static', filename='assets/css/bootstrap-responsive.css')}}" rel="stylesheet">
   <link href="{{url_for('static', filename='custom/custom.css')}}" rel="stylesheet">
@@ -49,13 +49,11 @@
 
       <!-- MAIN CONTENT WRAPPER -->
       <div class="main-content-wrapper">
-
-        <!-- MAIN CONTAINER -->
         {% block content %}
         <div class="main-container"></div> <!-- ./main-container -->
         {% endblock %}
-
       </div> <!-- ./main-content-wrapper -->
+
   </div> <!-- ./wrap -->
 
   <!-- jQuery via Google + local fallback, see h5bp.com -->

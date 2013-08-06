@@ -20,7 +20,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
 .navbar .nav > li > a {
     color: white;
     text-shadow: none;
-    border-right: 1px solid rgb(107, 158, 113);
+    border-right: 1px solid rgb(42, 129, 51);
     border-radius: 2px;
 }
 
@@ -31,22 +31,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
 
 /* Color transition bizness for navbar buttons */
 .navbar .nav li {
-    transition: background-color .5s;
-    -webkit-transition: background-color .5s;
-    -moz-transition: background-color .5s;
-    -o-transition: background-color .5s;
+    transition: background-color .7s;
+    -webkit-transition: background-color .7s;
+    -moz-transition: background-color .7s;
+    -o-transition: background-color .7s;
 }
 
 /* navbar hover */
 .navbar .nav > :hover {
     color: white;
-    background-color: rgb(65, 167, 56)
+    background-color: rgb(65, 167, 56);
 }
 
 /* navbar active and active hover */
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover  {
     color: white;
-    background-color: rgb(65, 167, 56)
+    background-color: rgb(65, 167, 56);
 }
 
 /* Brand: TODO: make cooler */
@@ -67,6 +67,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
 /*  Main page stuff */
 body {
     padding-top: 30px;
+    height: 100%;
     color: white;
 
     /* background image */
@@ -80,11 +81,17 @@ body {
 /* Styling for primary page title */
 .title-bar {
     font-size: 150%;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     text-align: left;
     padding: .15% 0 0 1%;
-    background-color: rgb(29, 201, 22);
+    background-color: rgb(45, 224, 37);
     color: white;
+
+    /*  transition */
+    -webkit-animation: slidein 1s; /* Safari 4+ */
+    -moz-animation:    slidein 1s; /* Fx 5+ */
+    -o-animation:      slidein 1s; /* Opera 12+ */
+    animation:         slidein 1s;
 }
 
 /* Main gutter on left side of the page */
@@ -118,10 +125,18 @@ body {
     box-shadow: 5px 5px 5px 2px rgb(30, 30, 30);
 
     /*  transition */
-    -webkit-animation: opacitychange 1s; /* Safari 4+ */
-    -moz-animation:    opacitychange 1s; /* Fx 5+ */
-    -o-animation:      opacitychange 1s; /* Opera 12+ */
-    animation:         opacitychange 1s;
+    /*-webkit-animation: opacitychange 1s; /* Safari 4+ */*/
+    /*-moz-animation:    opacitychange 1s; /* Fx 5+ */*/
+    /*-o-animation:      opacitychange 1s; /* Opera 12+ */*/
+    /*animation:         opacitychange 1s;*/
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(19, 19, 19);
 }
 
 /* text appearance - spacing */
@@ -138,8 +153,12 @@ h3, h4, p {
 }
 
 /* link color */
-a {
+a, a:hover {
     color: rgb(65, 221, 59);
+}
+
+a:visited {
+    color: orange;
 }
 
 /* contact form bizness */
@@ -196,6 +215,48 @@ input[type="submit"]:hover {
 @keyframes opacitything {
   0%   { opacity: 0; }
   100% { opacity: .8; }
+}
+
+/* title bar slide in */
+@-webkit-keyframes slidein {
+  0%   {
+    margin-left: -75%;
+    width: 200%;
+  }
+  100% {
+    margin-left: 0;
+    width: 200%;
+  }
+}
+@-moz-keyframes slidein {
+  0%   {
+    margin-left: -75%;
+    width: 200%;
+  }
+  100% {
+    margin-left: 1%;
+    width: 200%;
+  }
+}
+@-o-keyframes slidein {
+  0%   {
+    margin-left: -75%;
+    width: 200%;
+  }
+  100% {
+    margin-left: 1%;
+    width: 200%;
+  }
+}
+@keyframes slidein {
+  0%   {
+    margin-left: -75%;
+    width: 200%;
+  }
+  100% {
+    margin-left: 1%;
+    width: 200%;
+  }
 }
 
 

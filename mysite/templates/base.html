@@ -39,20 +39,28 @@
         </div><!-- /.navbar-inner -->
       </div><!-- /.navbar -->
 
-      <!-- TITLE BAR -->
-      <div class='title-bar' id='title-bar'>
-        {% block title %}{% endblock %}
-      </div> <!-- ./title-bar -->
-      
-      <!-- GUTTER -->
-      <div class="gutter"></div>
+      <!-- MAIN BODY -->
+      <div class="body">
+        <!-- TITLE BAR -->
+        <div class='title-bar' id='title-bar'>
+          {% block title %}{% endblock %}
+        </div> <!-- ./title-bar -->
+        
+        <!-- GUTTER -->
+        <div class="gutter"></div>
 
-      <!-- MAIN CONTENT WRAPPER -->
-      <div class="main-content-wrapper">
-        {% block content %}
-        <div class="main-container"></div> <!-- ./main-container -->
-        {% endblock %}
-      </div> <!-- ./main-content-wrapper -->
+        <!-- MAIN CONTENT WRAPPER -->
+        <div class="main-content-wrapper">
+          {% block content %}
+          <div class="main-container"></div> <!-- ./main-container -->
+          {% endblock %}
+        </div> <!-- ./main-content-wrapper -->
+      </div> <!-- ./body -->
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <h3>&copy; Calvin Belden. <a href="/contact">Contact me.</a></h3>
+      </div>
 
   </div> <!-- ./wrap -->
 

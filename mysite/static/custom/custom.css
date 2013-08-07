@@ -1,6 +1,22 @@
-/* General navbar-inner (part with buttons) */
+/*  Main page stuff */
+body {
+    height: 100%;
+    color: white;
+
+    /* background image */
+    background: url(misty_hills.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html {
+  height: 100%;
+}
+
+/* General navbar-inner (part with buttons) - colorzilla code! */
 .navbar-inner {
-  /* colorzilla generated code! */
 background: #006e2e; /* Old browsers */
 background: -moz-linear-gradient(top, #006e2e 0%, #006e2e 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#006e2e), color-stop(100%,#006e2e)); /* Chrome,Safari4+ */
@@ -64,26 +80,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
     border-radius: 4px;
 }
 
-/*  Main page stuff */
-body {
-    padding-top: 30px;
-    height: 100%;
-    color: white;
-
-    /* background image */
-    background: url(misty_hills.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
 /* Styling for primary page title */
 .title-bar {
     font-size: 150%;
+    height: 50px;
     margin-bottom: 60px;
     text-align: left;
-    padding: .15% 0 0 1%;
+    padding: 30px 0 0 1%;
     background-color: rgb(45, 224, 37);
     color: white;
 
@@ -94,6 +97,32 @@ body {
     animation:         slidein 1s;
 }
 
+.wrap {
+    min-height: 100%;
+    position:relative;
+}
+
+.body {
+  padding-bottom: 100px;
+}
+
+/* Wrapper around main, fixed content */
+.main-content-container {
+    width: 100%;
+    min-height: 100%;
+    position:relative;
+}
+
+.footer {
+    height: 60px; 
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(19, 19, 19);
+    opacity: 0.8;
+}
+
 /* Main gutter on left side of the page */
 .gutter {
     width: 10%;
@@ -101,18 +130,11 @@ body {
     height: 1px;
 }
 
-/* Wrapper around main, fixed content */
-.main-content-container {
-    width: 80%;
-    float: left;
-    margin-bottom: 100px;
-}
-
 /* Main page content div */
 .main-container {
     /* positioning */
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     /* size */
     width: 450px;
@@ -122,21 +144,20 @@ body {
     background-color: rgb(19, 19, 19);
     opacity: .9;
     border-radius: 4px;
-    box-shadow: 5px 5px 5px 2px rgb(30, 30, 30);
-
-    /*  transition */
-    /*-webkit-animation: opacitychange 1s; /* Safari 4+ */*/
-    /*-moz-animation:    opacitychange 1s; /* Fx 5+ */*/
-    /*-o-animation:      opacitychange 1s; /* Opera 12+ */*/
-    /*animation:         opacitychange 1s;*/
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: rgb(19, 19, 19);
+/* photo wrap styling */
+.selfie-wrap {
+    /* size */
+    width: 100px;
+    height: auto;
+
+    /* position */
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    /* appearance */
+    box-shadow: 1px 1px 2px 0 rgb(30, 30, 30);
 }
 
 /* text appearance - spacing */
@@ -164,6 +185,7 @@ a:visited {
 /* contact form bizness */
 .form-wrap {
   margin-left: 12px;
+  margin-bottom: 40px;
 }
 
 .single-line-input {
@@ -198,24 +220,6 @@ input[type="submit"]:hover {
 }
 
 /* keyframe business */
-
-/* opacity change */
-@-webkit-keyframes opacitychange {
-  0%   { opacity: 0; }
-  100% { opacity: .8; }
-}
-@-moz-keyframes opacitything {
-  0%   { opacity: 0; }
-  100% { opacity: .8; }
-}
-@-o-keyframes opacitything {
-  0%   { opacity: 0; }
-  100% { opacity: .8; }
-}
-@keyframes opacitything {
-  0%   { opacity: 0; }
-  100% { opacity: .8; }
-}
 
 /* title bar slide in */
 @-webkit-keyframes slidein {

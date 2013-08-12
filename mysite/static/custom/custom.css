@@ -153,11 +153,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
     height: auto;
 
     /* position */
-    margin: 0 auto;
+    margin: 15px auto;
     margin-bottom: 30px;
 
     /* appearance */
     box-shadow: 1px 1px 2px 0 rgb(30, 30, 30);
+}
+
+/* sets image border radius*/
+img {
+    border-radius: 4px;
 }
 
 /* text appearance - spacing */

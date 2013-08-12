@@ -1,6 +1,6 @@
 #import os
-import business.process_message as pm
 import business.page_not_found_message as pnfm
+import business.message as msg
 from mysite import app
 from flask import render_template, request
 
@@ -29,7 +29,10 @@ def about_site():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
-        pm.submit_message(request.form)
+        try:
+            msg.send_email(request.form)
+        except Exception, e:
+            return render_template('message_error.html', error=e)
         return render_template('thank_you.html', name=request.form['name'])
     else:
         return render_template('contact.html')

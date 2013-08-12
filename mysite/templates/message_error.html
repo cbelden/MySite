@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block pagetitle %}
+    Cal Belden - Uh Oh!
+{% endblock %}
+
+{% block contact_nav %}
+    class="active"
+{% endblock %}
+
+{% block title %}
+    <h2>There was an error sending your message.</h2>
+{% endblock %}
+
+{% block content %}
+  <div class="main-container" id="main-container">
+    <h3>I apologize.</h3>
+    <p>
+        There was an error sending your message; if you still wish to contact Cal you can send him an email at calbelden@outlook.com
+    </p>
+
+    <p>
+        Error: {{ error }}
+    </p>
+    </div> <!-- ./form-wrap -->
+  </div> <!-- ./main-container -->
+{% endblock %}

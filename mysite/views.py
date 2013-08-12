@@ -33,7 +33,7 @@ def contact():
             msg.send_email(request.form)
         except Exception, e:
             return render_template('message_error.html', error=e)
-        return render_template('thank_you.html', name=request.form['name'])
+        return render_template('thank_you.html', name=request.form['name'].split(' ').capitalize())
     else:
         return render_template('contact.html')
 

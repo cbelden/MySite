@@ -14,7 +14,8 @@ def send_email(form):
     my_email = app.config['MAIL_USERNAME']
 
     # Compose message - to myself
-    msg_to_me = Message('Contact from MySite', sender=my_email, recipients=[my_email])
+    title = 'Contact from MySite - %s' % boss_name
+    msg_to_me = Message(title, sender=my_email, recipients=[my_email])
     msg_to_me.body = """
     From: %s
     Company: %s

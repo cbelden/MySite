@@ -32,7 +32,7 @@ def contact():
             msg.send_email(request.form)
         except Exception, e:
             return render_template('message_error.html', error=e)
-        return render_template('thank_you.html', name=request.form['name'].split(' ').capitalize())
+        return render_template('thank_you.html', name=request.form['name'].split(' ')[0].capitalize())
     else:
         return render_template('contact.html')
 
@@ -42,3 +42,8 @@ def contact():
 def page_not_found(e):
     message = pnfm.get_404_message()
     return render_template('404.html', error_message=message), 404
+
+
+@app.errorhandler(500)
+def server_error():
+    return render_template('server_error.html')

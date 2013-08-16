@@ -114,13 +114,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
 }
 
 .footer {
-    height: 60px; 
+    height: 50px; 
     width:100%;
     position: absolute;
     left: 0;
     bottom: 0;
     background-color: rgb(19, 19, 19);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 /* Main gutter on left side of the page */
@@ -146,6 +146,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
     border-radius: 4px;
 }
 
+/* css hack for about page - main div was too short*/
+.spacer{
+    clear: both;
+}
+
+.about-container {
+    width: 300px;
+    float: left;
+}
+
 /* photo wrap styling */
 .selfie-wrap {
     /* size */
@@ -153,16 +163,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
     height: auto;
 
     /* position */
-    margin: 15px auto;
-    margin-bottom: 30px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
 
     /* appearance */
-    box-shadow: 1px 1px 2px 0 rgb(30, 30, 30);
+    box-shadow: 1px 1px 5px 0 rgb(30, 30, 30);
+    border-radius: 20px;
 }
 
 /* sets image border radius*/
 img {
-    border-radius: 4px;
+    border-radius: 20px;
 }
 
 /* text appearance - spacing */
@@ -173,7 +185,7 @@ p {
 
 /* Text positioning */
 h3, h4, p {
-    font-family: Oxygen;
+    font-family: Expletus Sans;
     color: white;
     margin-left: 15px;
 }
@@ -184,13 +196,17 @@ a, a:hover {
 }
 
 a:visited {
-    color: orange;
+    color: rgb(0, 255, 153);
+}
+
+ul.social-media li {
+    display: inline;
 }
 
 /* contact form bizness */
 .form-wrap {
   margin-left: 12px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .single-line-input {

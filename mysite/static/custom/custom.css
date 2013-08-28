@@ -173,7 +173,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
 }
 
 /* sets image border radius*/
-img {
+img.selfie {
     border-radius: 20px;
 }
 

@@ -1,5 +1,6 @@
 import business.page_not_found_message as pnfm
 import business.message as msg
+import business.models as models
 from mysite import app
 from flask import render_template, request
 
@@ -7,7 +8,7 @@ from flask import render_template, request
 # -------  primary page handlers -------
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', blockpreview="<p>perp</p>")
 
 
 @app.route('/about')

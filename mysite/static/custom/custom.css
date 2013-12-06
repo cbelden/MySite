@@ -15,6 +15,11 @@ html {
   height: 100%;
 }
 
+/* 
+ * Navbar Customization
+ * _______________________________________
+*/
+
 /* General navbar-inner (part with buttons) - colorzilla code! */
 .navbar-inner {
 background: #006e2e; /* Old browsers */
@@ -80,6 +85,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
     border-radius: 4px;
 }
 
+/* 
+ * General page customization
+ * _______________________________________
+*/
+
 /* Styling for primary page title */
 .title-bar {
     font-size: 150%;
@@ -111,6 +121,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
     width: 100%;
     min-height: 100%;
     position:relative;
+}
+
+/* Customization for welcome message */
+#welcome {
+    width: 60%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .footer {
@@ -147,7 +165,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', end
 }
 
 /* css hack for about page - main div was too short*/
-.spacer{
+.spacer {
     clear: both;
 }
 
@@ -188,6 +206,7 @@ h3, h4, p {
     font-family: Expletus Sans;
     color: white;
     margin-left: 15px;
+    margin-right: 15px;
 }
 
 /* link color */
@@ -240,7 +259,10 @@ input[type="submit"]:hover {
     background-color: rgb(82, 197, 72);
 }
 
-/* keyframe business */
+/*
+ * Animation
+ * _______________________________
+*/
 
 /* title bar slide in */
 @-webkit-keyframes slidein {

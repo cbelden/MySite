@@ -4,6 +4,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
+app.debug = True
 
 # configure mail settings
 app.config.update(
@@ -20,5 +21,6 @@ app.config.update(
 
 db = SQLAlchemy(app)
 mail = Mail(app)
+
 
 import mysite.views
